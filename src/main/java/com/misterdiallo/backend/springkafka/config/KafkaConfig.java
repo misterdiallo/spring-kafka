@@ -1,5 +1,6 @@
 package com.misterdiallo.backend.springkafka.config;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,10 +10,11 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ConfigurationProperties(prefix = "misterdiallo.kafka")
+@Builder
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
 public class KafkaConfig {
-    private  String topic;
+    private String topic;
+
 }
